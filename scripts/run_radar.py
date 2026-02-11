@@ -1,6 +1,12 @@
 from __future__ import annotations
 
 import argparse
+import os
+import sys
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 
 from defi_radar.models import ProtocolPoint
 from defi_radar.scoring import score
